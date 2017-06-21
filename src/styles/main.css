@@ -91,7 +91,7 @@ ul.right-items {
   margin-bottom: 70px; }
   @media (max-width: 800px) {
     .carousel-wrapper {
-      margin-bottom: 0px; } }
+      margin-bottom: 20px; } }
   .carousel-wrapper .swiper-container {
     padding-top: 580px;
     max-width: 1440px; }

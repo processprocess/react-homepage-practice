@@ -11,7 +11,7 @@ $bulletSize: 9px;
 .carousel-wrapper {
   margin-bottom: 70px;
   @media (max-width: $medium) {
-    margin-bottom: 0px;
+    margin-bottom: 20px;
   }
   .swiper-container {
     padding-top: $carousel-height;
