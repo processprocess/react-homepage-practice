@@ -27,6 +27,7 @@ class Posts extends Component {
               </div>
             </a>
             <div className="sponsor">Presented by <a className="text-link" href="#">{element.sponsor}</a></div>
+            <div className="border-bottom"></div>
           </div>
         </li>
       );
