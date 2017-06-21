@@ -11,7 +11,7 @@ class Carousel extends Component {
   render() {
     const carouselItems = this.props.carouselItems;
     const config = {
-      // autoplay: 5000,
+      autoplay: 5000,
       pagination: '.swiper-pagination',
       paginationClickable: true,
       scrollbar: false,
