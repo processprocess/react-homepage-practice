@@ -1,0 +1,18 @@
+footer {
+  font-family: $sans;
+  font-size: 11px;
+  padding: 75px 0;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: .1px;
+}
+
+@media (max-width: $small) {
+  footer {
+    padding: 30px 0;
+  }
+  .social-links {
+    display: block;
+  }
+}
+
