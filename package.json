@@ -11,6 +11,8 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "prop-types": "^15.5.10",
     "react-masonry-component": "^5.0.7",
     "swiper-r": "^0.1.3"
