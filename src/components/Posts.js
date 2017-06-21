@@ -8,15 +8,15 @@ class Posts extends Component {
   }
 
   render() {
-    const { posts } = this.props;
+    const posts = this.props.posts;
 
     const masonryOptions = {
       transitionDuration: '.6s',
     };
 
     const childElements = posts.map(function(element){
-       return (
-        <li className="post-wrapper" key={ element.date }>
+      return (
+        <li className="post-wrapper" key={element.date}>
           <div className="post-content">
             <a href="#" className="story-wrapper">
               <img src={element.img} alt="article" />
@@ -25,7 +25,6 @@ class Posts extends Component {
                 <div className="headline">{element.headline}</div>
               </div>
             </a>
-
             <div className="sponsor">Presented by <a className="text-link" href="#">{element.sponsor}</a></div>
           </div>
         </li>
@@ -34,13 +33,13 @@ class Posts extends Component {
 
     return (
       <div className="posts-wrapper">
-          <Masonry
-            className={'my-gallery-class'}
-            elementType={'ul'}
-            options={ masonryOptions }
-          >
-            {childElements}
-          </Masonry>
+        <Masonry
+          className={'my-gallery-class'}
+          elementType={'ul'}
+          options={ masonryOptions }
+        >
+          {childElements}
+        </Masonry>
       </div>
     );
   }

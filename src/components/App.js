@@ -3,40 +3,32 @@ import Header from './Header';
 import Carousel from './Carousel';
 import Posts from './Posts';
 import Footer from './Footer';
-import samplePosts from './samplePosts.json';
+import sampleData from './sampleData.json';
+import { dateSort } from '../helpers'
 
 class App extends Component {
   constructor() {
     super();
-    this.dateSort = this.dateSort.bind(this);
     this.state = {
-      posts: {}
+      posts: {},
+      carouselItems: {}
     };
   }
 
   componentWillMount() {
-    let sortedPosts = this.dateSort(samplePosts)
-    this.setState({ posts: sortedPosts });
-  }
-
-  dateSort(posts) {
-    const months = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]; // to get value from index
-    return posts.map(post => { // iterates over posts
-      let dateString = post.date.split(' ') // convert string into array to easily get values
-      let month = months.indexOf(dateString[0].toLowerCase()); // convert string into array to easily get values
-      let day = dateString[1] < 10 ? '0' + dateString[1]: dateString[1]; // to be sure numbers are consistent
-      let year = dateString[2] < 10 ? '0' + dateString[2]: dateString[2];
-      post.numDate = `${year}${month}${day}`; // set key and value on object
-      return post;
-    }).sort((a, b) => a.numDate - b.numDate); // sort by newly created numDate value
+    const {posts, carousel} = sampleData;
+    const sortedPosts = dateSort(posts)
+    const sortedCarousel = dateSort(carousel)
+    this.setState({ posts: sortedPosts, carouselItems: sortedCarousel });
   }
 
   render() {
     return (
       <div className="main">
         <Header />
-        <Carousel />
-        <Posts posts={this.state.posts}/>
+        <Carousel carouselItems={this.state.carouselItems} />
+        {/* <Carousel carouselItems={this.state.carouselItems} lineBreaks={this.lineBreaks} /> */}
+        <Posts posts={this.state.posts} />
         <Footer />
       </div>
     );

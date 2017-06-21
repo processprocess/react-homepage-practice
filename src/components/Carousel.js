@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Swiper from 'swiper-r';
-// import imageText from '../images/carousel/Hero-Panel-text.jpg';
-import imageOne from '../images/carousel/Hero-Panel-1.jpg';
-import imageTwo from '../images/carousel/Hero-Panel-2.jpg';
-import imageThree from '../images/carousel/Hero-Panel-3.jpg';
+import { lineBreaks } from '../helpers'
 
 class Carousel extends Component {
-  render() {
+  static propTypes = {
+    carouselItems: PropTypes.array.isRequired,
+  }
 
+  render() {
+    const carouselItems = this.props.carouselItems;
     const config = {
       // autoplay: 5000,
       pagination: '.swiper-pagination',
@@ -18,49 +20,27 @@ class Carousel extends Component {
       prevButton: false,
     };
 
+    const childElements = carouselItems.map(element => {
+      const style = {background: `url(${element.img}) no-repeat center`}
+      return (
+        <div className="carousel-item" key={element.date}>
+          <div className="text-overlay">
+            <div className="text-overlay-header">{lineBreaks(element.headline)}</div>
+            <div className="text-overlay-date">{element.date}</div>
+            <div className="text-overlay-cta">{element.cta}</div>
+          </div>
+          <div className="text-overlay-image"style={style}></div>
+        </div>
+      );
+    });
+
     return (
       <div className={ "carousel-wrapper" }>
-        <Swiper swiperConfig={ config }>
-
-          {/* <div className="carousel-item">
-            <div className="text-overlay">
-              <div className="text-overlay-header">Screening: <br/> DVF Secret Agent Part 2</div>
-              <div className="text-overlay-date">October 15, 2017</div>
-              <div className="text-overlay-cta">Join us for a private screening of DVF Secret Agent Part 2 <br/> with our special guest, director Peter Lindberg.</div>
-            </div>
-            <div className="text-overlay-image"style={ {background: `url(${imageText}) no-repeat center`} }></div>
-          </div> */}
-
-          <div className="carousel-item">
-            <div className="text-overlay">
-              <div className="text-overlay-header">Screening: <br/> DVF Secret Agent Part 2</div>
-              <div className="text-overlay-date">October 15, 2017</div>
-              <div className="text-overlay-cta">Join us for a private screening of DVF Secret Agent Part 2 <br/> with our special guest, director Peter Lindberg.</div>
-            </div>
-            <div className="text-overlay-image"style={ {background: `url(${imageOne}) no-repeat center`} }></div>
-          </div>
-
-          <div className="carousel-item">
-            <div className="text-overlay">
-              <div className="text-overlay-header">Screening: <br/> DVF Secret Agent Part 2</div>
-              <div className="text-overlay-date">October 15, 2017</div>
-              <div className="text-overlay-cta">Join us for a private screening of DVF Secret Agent Part 2 <br/> with our special guest, director Peter Lindberg.</div>
-            </div>
-            <div className="text-overlay-image"style={ {background: `url(${imageTwo}) no-repeat center`} }></div>
-          </div>
-
-          <div className="carousel-item">
-            <div className="text-overlay">
-              <div className="text-overlay-header">Screening: <br/> DVF Secret Agent Part 2</div>
-              <div className="text-overlay-date">October 15, 2017</div>
-              <div className="text-overlay-cta">Join us for a private screening of DVF Secret Agent Part 2 <br/> with our special guest, director Peter Lindberg.</div>
-            </div>
-            <div className="text-overlay-image"style={ {background: `url(${imageThree}) no-repeat center`} }></div>
-          </div>
-
-       </Swiper>
-       <div className="swiper-pagination"></div>
-     </div>
+        <Swiper swiperConfig={config}>
+          {childElements}
+        </Swiper>
+        <div className="swiper-pagination"></div>
+      </div>
     );
   }
 }

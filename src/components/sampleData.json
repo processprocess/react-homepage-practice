@@ -1,0 +1,60 @@
+{
+  "carousel": [
+    {
+      "img": "http://philipbell.org/reactSample/sampleImages/hero-panel-1.jpg",
+      "date": "October 11, 2017",
+      "headline": "Screening: \n DVF Secret Agent Part 2.",
+      "cta": "Join us for a private screening of DVF Secret Agent Part 2 \n with our special guest, director Peter Lindberg."
+    },
+    {
+      "img": "http://philipbell.org/reactSample/sampleImages/hero-panel-2.jpg",
+      "date": "September 8, 2017",
+      "headline": "Screening: \n DVF Secret Agent Part 2.",
+      "cta": "Join us for a private screening of DVF Secret Agent Part 2 \n with our special guest, director Peter Lindberg."
+    },
+    {
+      "img": "http://philipbell.org/reactSample/sampleImages/hero-panel-3.jpg",
+      "date": "September 29, 2017",
+      "headline": "Screening: \n DVF Secret Agent Part 2.",
+      "cta": "Join us for a private screening of DVF Secret Agent Part 2 \n with our special guest, director Peter Lindberg."
+    }
+  ],
+  "posts": [
+    {
+      "img": "http://philipbell.org/reactSample/sampleImages/mason-1.jpg",
+      "date": "February 10 2017",
+      "headline": "Bureaux exquisite delightful carefully curated soft power.",
+      "sponsor": "Lorem Ipsum"
+    },
+    {
+      "img": "http://philipbell.org/reactSample/sampleImages/mason-2.jpg",
+      "date": "February 2 2017",
+      "headline": "Sharp bureaux sleepy K-pop carefully curated.",
+      "sponsor": "Lorem Ipsum"
+    },
+    {
+      "img": "http://philipbell.org/reactSample/sampleImages/mason-3.jpg",
+      "date": "January 27 2017",
+      "headline": "St Moritz uniforms Beams.",
+      "sponsor": "Lorem Ipsum"
+    },
+    {
+      "img": "http://philipbell.org/reactSample/sampleImages/mason-4.jpg",
+      "date": "January 21 2017",
+      "headline": "Esse airport veniam ryokan soft power.",
+      "sponsor": "Lorem Ipsum"
+    },
+    {
+      "img": "http://philipbell.org/reactSample/sampleImages/mason-5.jpg",
+      "date": "January 18 2017",
+      "headline": "K-pop extraordinary.",
+      "sponsor": "Lorem Ipsum"
+    },
+    {
+      "img": "http://philipbell.org/reactSample/sampleImages/mason-6.jpg",
+      "date": "January 12 2017",
+      "headline": "Artisanal iconic cutting-edge business class.",
+      "sponsor": "Lorem Ipsum"
+    }
+  ]
+}
