@@ -12,6 +12,7 @@ class Posts extends Component {
 
     const masonryOptions = {
       transitionDuration: '.6s',
+      horizontalOrder: true,
     };
 
     const childElements = posts.map(function(element){
@@ -33,6 +34,7 @@ class Posts extends Component {
 
     return (
       <div className="posts-wrapper">
+
         <Masonry
           className={'my-gallery-class'}
           elementType={'ul'}
@@ -40,6 +42,7 @@ class Posts extends Component {
         >
           {childElements}
         </Masonry>
+
       </div>
     );
   }

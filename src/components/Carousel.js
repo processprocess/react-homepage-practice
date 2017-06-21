@@ -22,12 +22,13 @@ class Carousel extends Component {
 
     const childElements = carouselItems.map(element => {
       const style = {background: `url(${element.img}) no-repeat center`}
+
       return (
         <div className="carousel-item" key={element.date}>
           <div className="text-overlay">
             <div className="text-overlay-header">{lineBreaks(element.headline)}</div>
             <div className="text-overlay-date">{element.date}</div>
-            <div className="text-overlay-cta">{element.cta}</div>
+            <div className="text-overlay-cta">{lineBreaks(element.cta)}</div>
           </div>
           <div className="text-overlay-image"style={style}></div>
         </div>
@@ -35,8 +36,8 @@ class Carousel extends Component {
     });
 
     return (
-      <div className={ "carousel-wrapper" }>
-        <Swiper swiperConfig={config}>
+      <div className={ "carousel-wrapper" } >
+        <Swiper swiperConfig={config} >
           {childElements}
         </Swiper>
         <div className="swiper-pagination"></div>

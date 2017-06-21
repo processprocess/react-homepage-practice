@@ -32,7 +32,7 @@ $bulletSize: 9px;
     @include ratio-break {
       margin-top: 27.3%;
       @media (max-width: $extra-small) {
-        margin-top: 25%
+        margin-top: 22%
       }
     }
     &-header {
@@ -75,6 +75,8 @@ $bulletSize: 9px;
 .swiper-pagination {
   position: relative;
   padding: 8px 0;
+  // border: thin black solid;
+  width: 100%;
   &-bullet {
     opacity: 1;
     margin: 0 10px;
@@ -86,8 +88,8 @@ $bulletSize: 9px;
       background-color: rgb(180, 180, 180);
     }
   }
-  &-bullet-active {
-    background-color: rgb(120, 120, 120);
+  .swiper-pagination-bullet-active { // for some reason &-bullet-active isn't working here
+    background: rgb(120, 120, 120);
   }
 }
 

@@ -24,10 +24,16 @@
 .post-content {
   border-bottom: 1px solid rgb(219, 219, 219);
   margin-bottom: 50px;
+  @media (max-width: $small) {
+    margin-bottom: 35px;
+  }
   .story-wrapper {
     cursor: pointer;
     img {
       margin-bottom: 40px;
+      @media (max-width: $small) {
+        margin-bottom: 25px;
+      }
     }
     .date {
       font-family: $sans;
@@ -36,6 +42,9 @@
       text-transform: uppercase;
       color: rgb(160, 160, 160);
       margin-bottom: 30px;
+      @media (max-width: $small) {
+        margin-bottom: 15px;
+      }
     }
     .headline-wrap {
       max-width: 325px;
@@ -48,6 +57,10 @@
         line-height: 53px;
         border-bottom: 2px solid white;
         display: inline;
+        @media (max-width: $small) {
+          font-size: 35px;
+          line-height: 43px;
+        }
       }
     }
     &:hover .headline {
@@ -61,6 +74,9 @@
     span {
       border-bottom: 1px solid black;
       text-transform: uppercase;
+    }
+    @media (max-width: $small) {
+      margin-bottom: 30px;
     }
   }
 
