@@ -3,22 +3,22 @@ import Header from './Header';
 import Carousel from './Carousel';
 import Posts from './Posts';
 import Footer from './Footer';
-import sampleData from './sampleData.json';
-import { dateSort } from '../helpers'
+import sampleData from '../sampleData.json';
+import { dateSort } from '../helpers';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       posts: {},
-      carouselItems: {}
+      carouselItems: {},
     };
   }
 
   componentWillMount() {
-    const {posts, carousel} = sampleData;
-    const sortedPosts = dateSort(posts)
-    const sortedCarousel = dateSort(carousel)
+    const { posts, carousel } = sampleData;
+    const sortedPosts = dateSort(posts);
+    const sortedCarousel = dateSort(carousel);
     this.setState({ posts: sortedPosts, carouselItems: sortedCarousel });
   }
 
@@ -27,7 +27,6 @@ class App extends Component {
       <div className="main">
         <Header />
         <Carousel carouselItems={this.state.carouselItems} />
-        {/* <Carousel carouselItems={this.state.carouselItems} lineBreaks={this.lineBreaks} /> */}
         <Posts posts={this.state.posts} />
         <Footer />
       </div>

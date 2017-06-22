@@ -12,7 +12,7 @@ export function dateSort(posts) {
     post.numDate = `${year}${month}${day}`; // set key and value on object
     return post;
   }).sort((a, b) =>  b.numDate - a.numDate); // sort by newly created numDate value
-}
+};
 
 export function lineBreaks(aString) {
   return aString.split('\n').map(item => {
@@ -23,4 +23,4 @@ export function lineBreaks(aString) {
       </span>
     )
   })
-}
+};
