@@ -1,3 +1,5 @@
+[Live Demo](http://sparta-plaesent-sample.herokuapp.com/)  
+
 ### React / SCSS layout practice
 
 Built on React Create App.
